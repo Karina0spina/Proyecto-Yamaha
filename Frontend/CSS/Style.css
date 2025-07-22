@@ -1,0 +1,80 @@
+/* Fondo del banner principal */
+.hero-banner {
+  background-image: url('./IMG/fondo-nmax.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Fondo del banner NMAX */
+.header {
+  background-image: url('./IMG/banner_nmax2026.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  margin-bottom: 40px; /* Espacio debajo para evitar que se monte con lo siguiente */
+}
+
+/* Capa oscura encima del banner para mejor legibilidad */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Contenedor del texto dentro del banner */
+.header .text-center {
+  position: relative;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo del cuadro de login */
+.login-box {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Estilo para todos los títulos h2 */
+h2 {
+  font-weight: bold;
+  color: #002147;
+}
+
+/* ===================== */
+/* ESTILOS DEL CARRUSEL */
+/* ===================== */
+
+/* Evita que el carrusel tenga una altura fija */
+.carousel-inner {
+  height: auto !important;
+  max-height: none;
+}
+
+/* Asegura que las imágenes se muestren completas sin cortarse */
+.carousel-item {
+  height: auto;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Usa cover si prefieres que llene el espacio */
+  object-position: center;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Opcional: mejora la visibilidad de los indicadores */
+.carousel-indicators [data-bs-target] {
+  background-color: #ffffff;
+}
+
+/* Opcional: estilo para botones de navegación del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Los hace blancos si fondo es oscuro */
+}
